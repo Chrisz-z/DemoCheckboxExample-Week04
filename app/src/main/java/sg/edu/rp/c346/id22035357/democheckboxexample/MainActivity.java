@@ -2,7 +2,6 @@ package sg.edu.rp.c346.id22035357.democheckboxexample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,10 +29,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.i("MyActivity", "Inside onClick()");
                 String discount = "";
-                Context context = getApplicationContext();
-                String text = "Button Clicked";
-                int duration = Toast.LENGTH_LONG;
-                Toast toast = Toast.makeText(context,text,duration);
+                Toast toast = Toast.makeText(MainActivity.this,"Button Clicked",Toast.LENGTH_LONG);
                 toast.show();
                 if(cbEnabled.isChecked()){
                     double pay = calcPay(100, 20);
